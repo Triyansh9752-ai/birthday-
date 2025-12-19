@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Akshu 💖</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: "fade 1.5s ease-in-out",
+            glow: "glow 2s ease-in-out infinite alternate",
+            float: "float 6s linear infinite",
+            pulseSlow: "pulse 2.5s infinite",
+            pop: "pop 0.8s ease-out",
+            letterPop: "letterPop 0.5s ease-out forwards",
+          },
+          keyframes: {
+            fade: {
+              "0%": { opacity: 0, transform: "translateY(20px)" },
+              "100%": { opacity: 1, transform: "translateY(0)" },
+            },
+            glow: {
+              "0%": { textShadow: "0 0 10px #ff7ab6" },
+              "100%": { textShadow: "0 0 30px #ffc1dd" },
+            },
+            float: {
+              "0%": { transform: "translateY(100vh)", opacity: 0 },
+              "50%": { opacity: 1 },
+              "100%": { transform: "translateY(-10vh)", opacity: 0 },
+            },
+            pop: {
+              "0%": { transform: "scale(0)", opacity: 0 },
+              "80%": { transform: "scale(1.1)" },
+              "100%": { transform: "scale(1)", opacity: 1 },
+            },
+            letterPop: {
+              "0%": { opacity: 0, transform: "scale(0.3) translateY(20px)" },
+              "100%": { opacity: 1, transform: "scale(1) translateY(0)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-300 via-purple-300 to-pink-500 overflow-hidden relative">
+
+  <!-- Floating Hearts Background -->
+  <div id="hearts-container"></div>
+
+  <!-- Main Card -->
+  <div class="relative z-10 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 w-[90%] max-w-md text-center">
+
+    <h1 class="text-4xl md:text-5xl font-bold text-pink-600 animate-glow mb-4 opacity-0 animate-fade">
+      Happy Birthday 💖
+    </h1>
+
+    <p class="text-pink-700 text-lg mb-8 opacity-0 animate-fade animation-delay-500">
+      To my favorite person in the world 🌸
+    </p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="text-6xl font-bold text-pink-600 mb-8">
+      3
+    </div>
+
+    <!-- Big Heart Button -->
+    <button id="heartBtn"
+      class="hidden text-8xl animate-pulseSlow transition transform hover:scale-110 active:scale-95">
+      💖
+    </button>
+
+    <p class="mt-6 text-pink-600 text-lg animate-fade animation-delay-1000">
+      Tap the heart when it appears 💕
+    </p>
+  </div>
+
+  <!-- Secret Message Modal -->
+  <div id="modal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-20 hidden">
+    <div class="bg-white rounded-3xl p-8 w-[90%] max-w-md text-center shadow-2xl overflow-y-auto max-h-[90vh]">
+
+      <!-- Name with letter-by-letter pop animation -->
+      <h2 class="text-4xl md:text-5xl font-bold text-pink-600 mb-6">
+        <span class="inline-block opacity-0">A</span>
+        <span class="inline-block opacity-0">k</span>
+        <span class="inline-block opacity-0">s</span>
+        <span class="inline-block opacity-0">h</span>
+        <span class="inline-block opacity-0">u</span>
+        <span class="inline-block opacity-0"> </span>
+        <span class="inline-block opacity-0">💖</span>
+      </h2>
+
+      <p class="text-pink-500 text-lg mb-4">
+        🎵 Tap play… this song is just for you 💕
+      </p>
+
+      <p class="text-pink-800 leading-relaxed mb-8">
+        Today is all about <strong>you</strong> — the girl who makes my heart skip a beat every single day.<br><br>
+        You’re my sunshine, my laughter, my everything.<br>
+        Thank you for being the most amazing person in my world.<br>
+        I’m so lucky to have you. 💕<br><br>
+        Here’s to celebrating YOU with all the cake, cuddles, and kisses you deserve!<br>
+        I love you more than words can say. ❤️🎉
+      </p>
+
+      <!-- Why I Love You List -->
+      <div class="text-left bg-pink-100 rounded-2xl p-6 my-8">
+        <h3 class="text-xl font-bold text-pink-700 mb-4 text-center">Why I Love You 💕</h3>
+        <ul class="space-y-2 text-pink-800">
+          <li>❤️ Your smile lights up my whole world</li>
+          <li>❤️ The cute texts you send out of nowhere just to say you miss me</li>
+          <li>❤️ How you make every day feel special</li>
+          <li>❤️ How you make even rainy days feel warm and cozy</li>
+          <li>❤️ Being with you feels like home</li>
+          <li>❤️ ...and a million more reasons</li>
+        </ul>
+      </div>
+
+      <!-- Your Local Image: "i love you forever" -->
+      <img src="forever.jpg" 
+           alt="I love you forever 💖"
+           class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl mb-8 opacity-0 animate-fade animation-delay-800" 
+           onerror="this.style.display='none'" />
+
+      <!-- Spotify Embed -->
+      <iframe
+        class="rounded-2xl mb-6 w-full"
+        src="https://open.spotify.com/embed/track/5GQPBzoRBDxcAjwSSluQXD?utm_source=generator"
+        height="100"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+
+      <!-- Forever Yours Ending -->
+      <p class="mt-8 text-pink-600 italic text-lg">
+        Forever yours,<br>
+        [Triyansh] ❤️
+      </p>
+
+      <button onclick="closeModal()"
+        class="mt-6 px-8 py-3 bg-pink-500 text-white text-lg rounded-full shadow-lg hover:bg-pink-600 transition transform hover:scale-105">
+        Close 💖
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const emojis = ["💖","💕","💘","💝","🌸","✨","🎀","🦋"];
+
+    // Floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      heart.className = "absolute text-3xl animate-float pointer-events-none";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+      document.getElementById("hearts-container").appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }, 400);
+
+    // Countdown logic
+    let count = 3;
+    const countdownEl = document.getElementById("countdown");
+    const heartBtn = document.getElementById("heartBtn");
+
+    const timer = setInterval(() => {
+      count--;
+      if (count > 0) {
+        countdownEl.textContent = count;
+      } else {
+        clearInterval(timer);
+        countdownEl.classList.add("animate-pop");
+        countdownEl.innerHTML = "💖";
+        setTimeout(() => {
+          heartBtn.classList.remove("hidden");
+          heartBtn.classList.add("animate-pop");
+        }, 500);
+      }
+    }, 1000);
+
+    // Heart click → open modal + confetti + name animation
+    heartBtn.addEventListener("click", () => {
+      document.getElementById("modal").classList.remove("hidden");
+
+      // Letter-by-letter pop for name
+      const letters = document.querySelectorAll("#modal h2 span");
+      letters.forEach((letter, i) => {
+        setTimeout(() => {
+          letter.classList.remove("opacity-0");
+          letter.classList.add("animate-letterPop");
+        }, i * 200);
+      });
+
+      // Confetti burst
+      for (let i = 0; i < 60; i++) {
+        const c = document.createElement("div");
+        c.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        c.className = "absolute text-3xl pointer-events-none";
+        c.style.left = Math.random() * 100 + "vw";
+        c.style.top = Math.random() * 100 + "vh";
+        c.style.animation = "float 3s linear forwards";
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 3000);
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("modal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
